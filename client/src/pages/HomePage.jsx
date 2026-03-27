@@ -1,193 +1,190 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
 
 // ─── Palette & tokens ───────────────────────────────────────────────────────
 // Navy: #1A1A2E  |  Red: #D32F2F  |  Accent light: #E8E8F0  |  Muted: #8888A8
 
-// ─── Reusable tiny components ───────────────────────────────────────────────
-function NavBar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+// // ─── Reusable tiny components ───────────────────────────────────────────────
+// function NavBar() {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+//   useEffect(() => {
+//     const onScroll = () => setScrolled(window.scrollY > 40);
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
 
-  return (
-    <nav
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        background: scrolled ? "rgba(26,26,46,0.97)" : "transparent",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "none",
-        transition: "all 0.3s ease",
-        padding: "0 2rem",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: 68,
-        }}
-      >
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div
-            style={{
-              width: 32,
-              height: 32,
-              background: "#D32F2F",
-              borderRadius: 6,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontWeight: 700,
-              color: "#fff",
-              fontSize: 18,
-            }}
-          >
-            V
-          </div>
-          <span
-            style={{
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: 22,
-              color: "#fff",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Vitto
-          </span>
-        </div>
+//   return (
+//     <nav
+//       style={{
+//         position: "fixed",
+//         top: 0,
+//         left: 0,
+//         right: 0,
+//         zIndex: 100,
+//         background: scrolled ? "rgba(26,26,46,0.97)" : "transparent",
+//         backdropFilter: scrolled ? "blur(12px)" : "none",
+//         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "none",
+//         transition: "all 0.3s ease",
+//         padding: "0 2rem",
+//       }}
+//     >
+//       <div
+//         style={{
+//           maxWidth: 1200,
+//           margin: "0 auto",
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "space-between",
+//           height: 68,
+//         }}
+//       >
+//         {/* Logo */}
+//         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+//           <div
+//             style={{
+//               width: 32,
+//               height: 32,
+//               background: "#D32F2F",
+//               borderRadius: 6,
+//               display: "flex",
+//               alignItems: "center",
+//               justifyContent: "center",
+//               fontFamily: "'DM Serif Display', Georgia, serif",
+//               fontWeight: 700,
+//               color: "#fff",
+//               fontSize: 18,
+//             }}
+//           >
+//             V
+//           </div>
+//           <span
+//             style={{
+//               fontFamily: "'DM Serif Display', Georgia, serif",
+//               fontSize: 22,
+//               color: "#fff",
+//               letterSpacing: "-0.02em",
+//             }}
+//           >
+//             Vitto
+//           </span>
+//         </div>
 
-        {/* Desktop nav */}
-        <div
-          style={{
-            display: "flex",
-            gap: 32,
-            alignItems: "center",
-          }}
-          className="desktop-nav"
-        >
-          {["Platform", "Solutions", "Why Vitto", "Resources"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              style={{
-                color: "rgba(255,255,255,0.72)",
-                fontSize: 14,
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                textDecoration: "none",
-                letterSpacing: "0.01em",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.target.style.color = "#fff")}
-              onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.72)")}
-            >
-              {item}
-            </a>
-          ))}
-          <a
-            href="#demo"
-            style={{
-              background: "#D32F2F",
-              color: "#fff",
-              padding: "9px 20px",
-              borderRadius: 6,
-              fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              textDecoration: "none",
-              transition: "background 0.2s, transform 0.15s",
-              display: "inline-block",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = "#B71C1C";
-              e.target.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = "#D32F2F";
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            Book a Demo
-          </a>
-        </div>
+//         {/* Desktop nav */}
+//         <div
+//           style={{
+//             display: "flex",
+//             gap: 32,
+//             alignItems: "center",
+//           }}
+//           className="desktop-nav"
+//         >
+//           {[
+//   { label: "Platform", path: "/platform" },
+//   { label: "Automation", path: "/automation" },
+//   { label: "Why Vitto", path: "#" },
+//   { label: "Resources", path: "#" },
+// ].map((item) => (
+//   <Link
+//     key={item.label}
+//     to={item.path}
+//     style={{
+//       color: "rgba(255,255,255,0.72)",
+//       fontSize: 14,
+//       fontFamily: "'DM Sans', sans-serif",
+//       fontWeight: 500,
+//       textDecoration: "none",
+//       letterSpacing: "0.01em",
+//       transition: "color 0.2s",
+//     }}
+//     onMouseEnter={(e) => (e.target.style.color = "#fff")}
+//     onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.72)")}
+//   >
+//     {item.label}
+//   </Link>
+// ))}
+           
+// <Link
+//   to="/signup"
+//   style={{
+//     background: "#D32F2F",
+//     color: "#fff",
+//     padding: "9px 20px",
+//     borderRadius: 6,
+//     fontSize: 14,
+//     fontFamily: "'DM Sans', sans-serif",
+//     fontWeight: 600,
+//     textDecoration: "none",
+//   }}
+// >
+//   Book a Demo
+// </Link>
+//         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            color: "#fff",
-            fontSize: 24,
-            cursor: "pointer",
-          }}
-          className="mobile-menu-btn"
-        >
-          {menuOpen ? "✕" : "☰"}
-        </button>
-      </div>
+//         {/* Mobile hamburger */}
+//         <button
+//           onClick={() => setMenuOpen(!menuOpen)}
+//           style={{
+//             display: "none",
+//             background: "none",
+//             border: "none",
+//             color: "#fff",
+//             fontSize: 24,
+//             cursor: "pointer",
+//           }}
+//           className="mobile-menu-btn"
+//         >
+//           {menuOpen ? "✕" : "☰"}
+//         </button>
+//       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div
-          style={{
-            background: "#1A1A2E",
-            padding: "1rem 2rem 1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: 16,
-          }}
-        >
-          {["Platform", "Solutions", "Why Vitto", "Resources"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              style={{
-                color: "rgba(255,255,255,0.8)",
-                fontSize: 15,
-                fontFamily: "'DM Sans', sans-serif",
-                textDecoration: "none",
-              }}
-            >
-              {item}
-            </a>
-          ))}
-          <a
-            href="#demo"
-            style={{
-              background: "#D32F2F",
-              color: "#fff",
-              padding: "10px 20px",
-              borderRadius: 6,
-              fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              textDecoration: "none",
-              textAlign: "center",
-            }}
-          >
-            Book a Demo
-          </a>
-        </div>
-      )}
-    </nav>
-  );
-}
+//       {/* Mobile menu */}
+//       {menuOpen && (
+//         <div
+//           style={{
+//             background: "#1A1A2E",
+//             padding: "1rem 2rem 1.5rem",
+//             display: "flex",
+//             flexDirection: "column",
+//             gap: 16,
+//           }}
+//         >
+//           {["Platform", "Solutions", "Why Vitto", "Resources"].map((item) => (
+//             <a
+//               key={item}
+//               href="#"
+//               style={{
+//                 color: "rgba(255,255,255,0.8)",
+//                 fontSize: 15,
+//                 fontFamily: "'DM Sans', sans-serif",
+//                 textDecoration: "none",
+//               }}
+//             >
+//               {item}
+//             </a>
+//           ))}
+//           <a
+//             href="#demo"
+//             style={{
+//               background: "#D32F2F",
+//               color: "#fff",
+//               padding: "10px 20px",
+//               borderRadius: 6,
+//               fontSize: 14,
+//               fontFamily: "'DM Sans', sans-serif",
+//               fontWeight: 600,
+//               textDecoration: "none",
+//               textAlign: "center",
+//             }}
+//           >
+//             Book a Demo
+//           </a>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// }
 
 // ─── Section A: Hero ────────────────────────────────────────────────────────
 function Hero() {
@@ -1274,202 +1271,202 @@ function CTABanner() {
   );
 }
 
-// ─── Section H: Footer ──────────────────────────────────────────────────────
-function Footer() {
-  const [email, setEmail] = useState("");
+// // ─── Section H: Footer ──────────────────────────────────────────────────────
+// function Footer() {
+//   const [email, setEmail] = useState("");
 
-  return (
-    <footer style={{ background: "#0D0D1F", padding: "72px 2rem 40px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        {/* Top row */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
-            gap: 48,
-            paddingBottom: 48,
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
-            marginBottom: 40,
-          }}
-          className="footer-grid"
-        >
-          {/* Brand */}
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-              <div
-                style={{
-                  width: 28,
-                  height: 28,
-                  background: "#D32F2F",
-                  borderRadius: 5,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: "#fff",
-                  fontSize: 16,
-                }}
-              >
-                V
-              </div>
-              <span
-                style={{
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontSize: 20,
-                  color: "#fff",
-                }}
-              >
-                Vitto
-              </span>
-            </div>
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13,
-                color: "rgba(255,255,255,0.38)",
-                lineHeight: 1.7,
-                maxWidth: 260,
-                margin: "0 0 24px",
-              }}
-            >
-              AI-native digital credit infrastructure for Banks, NBFCs, and
-              Microfinance Institutions.
-            </p>
-            {/* Newsletter */}
-            <div style={{ display: "flex", gap: 8 }}>
-              <input
-                type="email"
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                style={{
-                  flex: 1,
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: 6,
-                  padding: "10px 14px",
-                  color: "#fff",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  outline: "none",
-                }}
-              />
-              <button
-                style={{
-                  background: "#D32F2F",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 6,
-                  padding: "10px 16px",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
+//   return (
+//     <footer style={{ background: "#0D0D1F", padding: "72px 2rem 40px" }}>
+//       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+//         {/* Top row */}
+//         <div
+//           style={{
+//             display: "grid",
+//             gridTemplateColumns: "2fr 1fr 1fr 1fr",
+//             gap: 48,
+//             paddingBottom: 48,
+//             borderBottom: "1px solid rgba(255,255,255,0.06)",
+//             marginBottom: 40,
+//           }}
+//           className="footer-grid"
+//         >
+//           {/* Brand */}
+//           <div>
+//             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+//               <div
+//                 style={{
+//                   width: 28,
+//                   height: 28,
+//                   background: "#D32F2F",
+//                   borderRadius: 5,
+//                   display: "flex",
+//                   alignItems: "center",
+//                   justifyContent: "center",
+//                   fontFamily: "'DM Serif Display', Georgia, serif",
+//                   fontWeight: 700,
+//                   color: "#fff",
+//                   fontSize: 16,
+//                 }}
+//               >
+//                 V
+//               </div>
+//               <span
+//                 style={{
+//                   fontFamily: "'DM Serif Display', Georgia, serif",
+//                   fontSize: 20,
+//                   color: "#fff",
+//                 }}
+//               >
+//                 Vitto
+//               </span>
+//             </div>
+//             <p
+//               style={{
+//                 fontFamily: "'DM Sans', sans-serif",
+//                 fontSize: 13,
+//                 color: "rgba(255,255,255,0.38)",
+//                 lineHeight: 1.7,
+//                 maxWidth: 260,
+//                 margin: "0 0 24px",
+//               }}
+//             >
+//               AI-native digital credit infrastructure for Banks, NBFCs, and
+//               Microfinance Institutions.
+//             </p>
+//             {/* Newsletter */}
+//             <div style={{ display: "flex", gap: 8 }}>
+//               <input
+//                 type="email"
+//                 placeholder="Your email"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 style={{
+//                   flex: 1,
+//                   background: "rgba(255,255,255,0.06)",
+//                   border: "1px solid rgba(255,255,255,0.1)",
+//                   borderRadius: 6,
+//                   padding: "10px 14px",
+//                   color: "#fff",
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   outline: "none",
+//                 }}
+//               />
+//               <button
+//                 style={{
+//                   background: "#D32F2F",
+//                   color: "#fff",
+//                   border: "none",
+//                   borderRadius: 6,
+//                   padding: "10px 16px",
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   fontWeight: 600,
+//                   cursor: "pointer",
+//                   whiteSpace: "nowrap",
+//                 }}
+//               >
+//                 Subscribe
+//               </button>
+//             </div>
+//           </div>
 
-          {/* Nav columns */}
-          {[
-            {
-              heading: "Pages",
-              links: ["Homepage", "AI Platform", "Lending Lifecycle", "Collections", "Agentic AI"],
-            },
-            {
-              heading: "Platform",
-              links: ["API Docs", "Integrations", "Security", "Changelog", "Status"],
-            },
-            {
-              heading: "Partners",
-              links: ["Partner Program", "Bureau Partners", "Banking Partners", "Become a Partner"],
-            },
-          ].map((col) => (
-            <div key={col.heading}>
-              <h4
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 11,
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.3)",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  margin: "0 0 20px",
-                }}
-              >
-                {col.heading}
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {col.links.map((link) => (
-                  <a
-                    key={link}
-                    href="#"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: "rgba(255,255,255,0.45)",
-                      textDecoration: "none",
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={(e) => (e.target.style.color = "#fff")}
-                    onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.45)")}
-                  >
-                    {link}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+//           {/* Nav columns */}
+//           {[
+//             {
+//               heading: "Pages",
+//               links: ["Homepage", "AI Platform", "Lending Lifecycle", "Collections", "Agentic AI"],
+//             },
+//             {
+//               heading: "Platform",
+//               links: ["API Docs", "Integrations", "Security", "Changelog", "Status"],
+//             },
+//             {
+//               heading: "Partners",
+//               links: ["Partner Program", "Bureau Partners", "Banking Partners", "Become a Partner"],
+//             },
+//           ].map((col) => (
+//             <div key={col.heading}>
+//               <h4
+//                 style={{
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 11,
+//                   fontWeight: 600,
+//                   color: "rgba(255,255,255,0.3)",
+//                   letterSpacing: "0.1em",
+//                   textTransform: "uppercase",
+//                   margin: "0 0 20px",
+//                 }}
+//               >
+//                 {col.heading}
+//               </h4>
+//               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+//                 {col.links.map((link) => (
+//                   <a
+//                     key={link}
+//                     href="#"
+//                     style={{
+//                       fontFamily: "'DM Sans', sans-serif",
+//                       fontSize: 14,
+//                       color: "rgba(255,255,255,0.45)",
+//                       textDecoration: "none",
+//                       transition: "color 0.2s",
+//                     }}
+//                     onMouseEnter={(e) => (e.target.style.color = "#fff")}
+//                     onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.45)")}
+//                   >
+//                     {link}
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        {/* Bottom row */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 16,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13,
-              color: "rgba(255,255,255,0.25)",
-              margin: 0,
-            }}
-          >
-            © 2025 Vitto Technologies Pvt. Ltd. All rights reserved.
-          </p>
-          <div style={{ display: "flex", gap: 20 }}>
-            {["LinkedIn", "Twitter", "GitHub"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  color: "rgba(255,255,255,0.3)",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.target.style.color = "#fff")}
-                onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.3)")}
-              >
-                {social}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+//         {/* Bottom row */}
+//         <div
+//           style={{
+//             display: "flex",
+//             justifyContent: "space-between",
+//             alignItems: "center",
+//             flexWrap: "wrap",
+//             gap: 16,
+//           }}
+//         >
+//           <p
+//             style={{
+//               fontFamily: "'DM Sans', sans-serif",
+//               fontSize: 13,
+//               color: "rgba(255,255,255,0.25)",
+//               margin: 0,
+//             }}
+//           >
+//             © 2025 Vitto Technologies Pvt. Ltd. All rights reserved.
+//           </p>
+//           <div style={{ display: "flex", gap: 20 }}>
+//             {["LinkedIn", "Twitter", "GitHub"].map((social) => (
+//               <a
+//                 key={social}
+//                 href="#"
+//                 style={{
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   color: "rgba(255,255,255,0.3)",
+//                   textDecoration: "none",
+//                   transition: "color 0.2s",
+//                 }}
+//                 onMouseEnter={(e) => (e.target.style.color = "#fff")}
+//                 onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.3)")}
+//               >
+//                 {social}
+//               </a>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
 
 // ─── Responsive CSS injected via style tag ───────────────────────────────────
 const responsiveStyles = `
@@ -1498,7 +1495,7 @@ export default function HomePage() {
     <>
       <style>{responsiveStyles}</style>
       <div style={{ background: "#1A1A2E" }}>
-        <NavBar />
+       {/* // <NavBar /> */}
         <Hero />
         <ProblemSection />
         <SolutionSection />
@@ -1506,7 +1503,7 @@ export default function HomePage() {
         <ImpactSection />
         <SocialProofSection />
         <CTABanner />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
