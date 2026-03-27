@@ -2,7 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 
-
+const connectMongo = require("./db/mongo");
 const authRoutes = require("./routes/auth");
 const leadRoutes = require("./routes/leads");
 
@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/leads", leadRoutes);
+
+connectMongo();
 
 app.get("/health", (req, res) => res.json({ status: "ok" }));
 
