@@ -2759,7 +2759,7 @@ function SocialProofSection() {
   const logos = [
     "Axis Bank",
     "Muthoot Finance",
-    "CreditBee",
+
     "Lendingkart",
     "KreditBee",
     "Shriram Finance",
@@ -3036,232 +3036,232 @@ function CTABanner() {
   );
 }
 
-// ─── Section H: Footer ──────────────────────────────────────────────────────
-function Footer() {
-  const [email, setEmail] = useState("");
+// // ─── Section H: Footer ──────────────────────────────────────────────────────
+// function Footer() {
+//   const [email, setEmail] = useState("");
 
-  return (
-    <footer style={{ background: "#0D0D1F", padding: "72px 2rem 40px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        {/* Top row */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
-            gap: 48,
-            paddingBottom: 48,
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
-            marginBottom: 40,
-          }}
-          className="footer-grid"
-        >
-          {/* Brand */}
-          <div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                marginBottom: 16,
-              }}
-            >
-              <div
-                style={{
-                  width: 28,
-                  height: 28,
-                  background: "#D32F2F",
-                  borderRadius: 5,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: "#fff",
-                  fontSize: 16,
-                }}
-              >
-                V
-              </div>
-              <span
-                style={{
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontSize: 20,
-                  color: "#fff",
-                }}
-              >
-                Vitto
-              </span>
-            </div>
-            <p
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13,
-                color: "rgba(255,255,255,0.38)",
-                lineHeight: 1.7,
-                maxWidth: 260,
-                margin: "0 0 24px",
-              }}
-            >
-              AI-native digital credit infrastructure for Banks, NBFCs, and
-              Microfinance Institutions.
-            </p>
-            {/* Newsletter */}
-            <div style={{ display: "flex", gap: 8 }}>
-              <input
-                type="email"
-                placeholder="Your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                style={{
-                  flex: 1,
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: 6,
-                  padding: "10px 14px",
-                  color: "#fff",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  outline: "none",
-                }}
-              />
-              <button
-                style={{
-                  background: "#D32F2F",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 6,
-                  padding: "10px 16px",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
+//   return (
+//     <footer style={{ background: "#0D0D1F", padding: "72px 2rem 40px" }}>
+//       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+//         {/* Top row */}
+//         <div
+//           style={{
+//             display: "grid",
+//             gridTemplateColumns: "2fr 1fr 1fr 1fr",
+//             gap: 48,
+//             paddingBottom: 48,
+//             borderBottom: "1px solid rgba(255,255,255,0.06)",
+//             marginBottom: 40,
+//           }}
+//           className="footer-grid"
+//         >
+//           {/* Brand */}
+//           <div>
+//             <div
+//               style={{
+//                 display: "flex",
+//                 alignItems: "center",
+//                 gap: 10,
+//                 marginBottom: 16,
+//               }}
+//             >
+//               <div
+//                 style={{
+//                   width: 28,
+//                   height: 28,
+//                   background: "#D32F2F",
+//                   borderRadius: 5,
+//                   display: "flex",
+//                   alignItems: "center",
+//                   justifyContent: "center",
+//                   fontFamily: "'DM Serif Display', Georgia, serif",
+//                   fontWeight: 700,
+//                   color: "#fff",
+//                   fontSize: 16,
+//                 }}
+//               >
+//                 V
+//               </div>
+//               <span
+//                 style={{
+//                   fontFamily: "'DM Serif Display', Georgia, serif",
+//                   fontSize: 20,
+//                   color: "#fff",
+//                 }}
+//               >
+//                 Vitto
+//               </span>
+//             </div>
+//             <p
+//               style={{
+//                 fontFamily: "'DM Sans', sans-serif",
+//                 fontSize: 13,
+//                 color: "rgba(255,255,255,0.38)",
+//                 lineHeight: 1.7,
+//                 maxWidth: 260,
+//                 margin: "0 0 24px",
+//               }}
+//             >
+//               AI-native digital credit infrastructure for Banks, NBFCs, and
+//               Microfinance Institutions.
+//             </p>
+//             {/* Newsletter */}
+//             <div style={{ display: "flex", gap: 8 }}>
+//               <input
+//                 type="email"
+//                 placeholder="Your email"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 style={{
+//                   flex: 1,
+//                   background: "rgba(255,255,255,0.06)",
+//                   border: "1px solid rgba(255,255,255,0.1)",
+//                   borderRadius: 6,
+//                   padding: "10px 14px",
+//                   color: "#fff",
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   outline: "none",
+//                 }}
+//               />
+//               <button
+//                 style={{
+//                   background: "#D32F2F",
+//                   color: "#fff",
+//                   border: "none",
+//                   borderRadius: 6,
+//                   padding: "10px 16px",
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   fontWeight: 600,
+//                   cursor: "pointer",
+//                   whiteSpace: "nowrap",
+//                 }}
+//               >
+//                 Subscribe
+//               </button>
+//             </div>
+//           </div>
 
-          {/* Nav columns */}
-          {[
-            {
-              heading: "Pages",
-              links: [
-                "Homepage",
-                "AI Platform",
-                "Lending Lifecycle",
-                "Collections",
-                "Agentic AI",
-              ],
-            },
-            {
-              heading: "Platform",
-              links: [
-                "API Docs",
-                "Integrations",
-                "Security",
-                "Changelog",
-                "Status",
-              ],
-            },
-            {
-              heading: "Partners",
-              links: [
-                "Partner Program",
-                "Bureau Partners",
-                "Banking Partners",
-                "Become a Partner",
-              ],
-            },
-          ].map((col) => (
-            <div key={col.heading}>
-              <h4
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 11,
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.3)",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  margin: "0 0 20px",
-                }}
-              >
-                {col.heading}
-              </h4>
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: 12 }}
-              >
-                {col.links.map((link) => (
-                  <a
-                    key={link}
-                    href="#"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
-                      color: "rgba(255,255,255,0.45)",
-                      textDecoration: "none",
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={(e) => (e.target.style.color = "#fff")}
-                    onMouseLeave={(e) =>
-                      (e.target.style.color = "rgba(255,255,255,0.45)")
-                    }
-                  >
-                    {link}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+//           {/* Nav columns */}
+//           {[
+//             {
+//               heading: "Pages",
+//               links: [
+//                 "Homepage",
+//                 "AI Platform",
+//                 "Lending Lifecycle",
+//                 "Collections",
+//                 "Agentic AI",
+//               ],
+//             },
+//             {
+//               heading: "Platform",
+//               links: [
+//                 "API Docs",
+//                 "Integrations",
+//                 "Security",
+//                 "Changelog",
+//                 "Status",
+//               ],
+//             },
+//             {
+//               heading: "Partners",
+//               links: [
+//                 "Partner Program",
+//                 "Bureau Partners",
+//                 "Banking Partners",
+//                 "Become a Partner",
+//               ],
+//             },
+//           ].map((col) => (
+//             <div key={col.heading}>
+//               <h4
+//                 style={{
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 11,
+//                   fontWeight: 600,
+//                   color: "rgba(255,255,255,0.3)",
+//                   letterSpacing: "0.1em",
+//                   textTransform: "uppercase",
+//                   margin: "0 0 20px",
+//                 }}
+//               >
+//                 {col.heading}
+//               </h4>
+//               <div
+//                 style={{ display: "flex", flexDirection: "column", gap: 12 }}
+//               >
+//                 {col.links.map((link) => (
+//                   <a
+//                     key={link}
+//                     href="#"
+//                     style={{
+//                       fontFamily: "'DM Sans', sans-serif",
+//                       fontSize: 14,
+//                       color: "rgba(255,255,255,0.45)",
+//                       textDecoration: "none",
+//                       transition: "color 0.2s",
+//                     }}
+//                     onMouseEnter={(e) => (e.target.style.color = "#fff")}
+//                     onMouseLeave={(e) =>
+//                       (e.target.style.color = "rgba(255,255,255,0.45)")
+//                     }
+//                   >
+//                     {link}
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
 
-        {/* Bottom row */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 16,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13,
-              color: "rgba(255,255,255,0.25)",
-              margin: 0,
-            }}
-          >
-            © 2025 Vitto Technologies Pvt. Ltd. All rights reserved.
-          </p>
-          <div style={{ display: "flex", gap: 20 }}>
-            {["LinkedIn", "Twitter", "GitHub"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  color: "rgba(255,255,255,0.3)",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => (e.target.style.color = "#fff")}
-                onMouseLeave={(e) =>
-                  (e.target.style.color = "rgba(255,255,255,0.3)")
-                }
-              >
-                {social}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+//         {/* Bottom row */}
+//         <div
+//           style={{
+//             display: "flex",
+//             justifyContent: "space-between",
+//             alignItems: "center",
+//             flexWrap: "wrap",
+//             gap: 16,
+//           }}
+//         >
+//           <p
+//             style={{
+//               fontFamily: "'DM Sans', sans-serif",
+//               fontSize: 13,
+//               color: "rgba(255,255,255,0.25)",
+//               margin: 0,
+//             }}
+//           >
+//             © 2025 Vitto Technologies Pvt. Ltd. All rights reserved.
+//           </p>
+//           <div style={{ display: "flex", gap: 20 }}>
+//             {["LinkedIn", "Twitter", "GitHub"].map((social) => (
+//               <a
+//                 key={social}
+//                 href="#"
+//                 style={{
+//                   fontFamily: "'DM Sans', sans-serif",
+//                   fontSize: 13,
+//                   color: "rgba(255,255,255,0.3)",
+//                   textDecoration: "none",
+//                   transition: "color 0.2s",
+//                 }}
+//                 onMouseEnter={(e) => (e.target.style.color = "#fff")}
+//                 onMouseLeave={(e) =>
+//                   (e.target.style.color = "rgba(255,255,255,0.3)")
+//                 }
+//               >
+//                 {social}
+//               </a>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
 
 // ─── Responsive CSS ──────────────────────────────────────────────────────────
 const responsiveStyles = `
@@ -3298,7 +3298,7 @@ export default function HomePage() {
         <ImpactSection />
         <SocialProofSection />
         <CTABanner />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AIPlatformPage from "./pages/AIPlatformPage";
 import AutomationPage from "./pages/AutomationPage";
+import SignupPage from "./pages/SignupPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/platform" element={<AIPlatformPage />} />
           <Route path="/automation" element={<AutomationPage />} />
+          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </Layout>
     </Router>
