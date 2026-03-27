@@ -1,9 +1,7 @@
+import HomePage from "./pages/HomePage";
+
 function App() {
-  return (
-    <div className="bg-navy min-h-screen text-white">
-      <h1 className="text-4xl font-bold p-8">Vitto</h1>
-    </div>
-  )
+  return <HomePage />;
 }
 
-export default App
+export default App;
