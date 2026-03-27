@@ -1,17 +1,23 @@
 const router = require("express").Router();
 
-// POST /api/leads
+const pool = require("../db/postgres");
+//POST ROUTE 
 router.post("/", async (req, res) => {
   const { email, phone, institution_name, institution_type, city, loan_book_size } = req.body;
-  // TODO: insert into PostgreSQL
-  console.log("Lead received:", req.body);
-  res.status(201).json({ message: "Lead saved", id: "mock-id-001" });
+
+  const result = await pool.query(
+    `INSERT INTO leads (email, phone, institution_name, institution_type, city, loan_book_size)
+     VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+    [email, phone, institution_name, institution_type, city, loan_book_size]
+  );
+
+  res.status(201).json(result.rows[0]);
 });
 
-// GET /api/leads/:id
-router.get("/:id", async (req, res) => {
-  // TODO: fetch from PostgreSQL
-  res.json({ id: req.params.id, status: "pending" });
+//GET ROUTE
+router.get("/", async (req, res) => {
+  const result = await pool.query("SELECT * FROM leads");
+  res.json(result.rows);
 });
 
 module.exports = router;

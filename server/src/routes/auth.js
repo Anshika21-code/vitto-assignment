@@ -8,7 +8,8 @@ router.post("/send-otp", async (req, res) => {
     return res.status(400).json({ error: "Email or phone required" });
 
   const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  console.log(`OTP for ${email || phone}: ${otp}`); // mock — prints to terminal
+  const Otp = require("../models/OtpSession");
+  await Otp.create({ email, phone, otp });
 
   res.json({ message: "OTP sent successfully", otp }); // remove otp from response in production
 });
@@ -18,7 +19,11 @@ router.post("/verify-otp", async (req, res) => {
   const { email, phone, otp } = req.body;
 
   // Mock validation for now
-  if (otp !== "123456") {
+  const record = await Otp.findOne({ email, otp });
+
+if (!record) {
+  return res.status(400).json({ error: "Invalid or expired OTP" });
+} {
     return res.status(400).json({ error: "Invalid or expired OTP" });
   }
 
