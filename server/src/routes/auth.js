@@ -1,5 +1,47 @@
+// const router = require("express").Router();
+// const jwt = require("jsonwebtoken");
+
+// // POST /api/auth/send-otp
+// router.post("/send-otp", async (req, res) => {
+//   const { email, phone } = req.body;
+//   if (!email && !phone)
+//     return res.status(400).json({ error: "Email or phone required" });
+
+//   const otp = Math.floor(100000 + Math.random() * 900000).toString();
+//   const Otp = require("../models/OtpSession");
+//   await Otp.create({ email, phone, otp });
+
+//   res.json({ message: "OTP sent successfully", otp }); // remove otp from response in production
+// });
+
+// // POST /api/auth/verify-otp
+// router.post("/verify-otp", async (req, res) => {
+//   const { email, phone, otp } = req.body;
+
+//   // Mock validation for now
+//   const record = await Otp.findOne({ email, otp });
+
+// if (!record) {
+//   return res.status(400).json({ error: "Invalid or expired OTP" });
+// } {
+//     return res.status(400).json({ error: "Invalid or expired OTP" });
+//   }
+
+//   // Generate JWT token
+//   const token = jwt.sign(
+//     { email, phone },          // payload — what you embed in the token
+//     process.env.JWT_SECRET,    // secret from .env
+//     { expiresIn: "1h" }        // token expires in 1 hour
+//   );
+
+//   res.json({ message: "OTP verified", token });
+// });
+
+// module.exports = router;
+
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
+const Otp = require("../models/OtpSession"); 
 
 // POST /api/auth/send-otp
 router.post("/send-otp", async (req, res) => {
@@ -7,34 +49,34 @@ router.post("/send-otp", async (req, res) => {
   if (!email && !phone)
     return res.status(400).json({ error: "Email or phone required" });
 
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  const Otp = require("../models/OtpSession");
-  await Otp.create({ email, phone, otp });
+  const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
 
-  res.json({ message: "OTP sent successfully", otp }); // remove otp from response in production
+  await Otp.deleteMany({ $or: [{ email }, { phone }] }); // clear old OTPs first
+  await Otp.create({ email, phone, otp: otpCode });
+
+  res.json({ message: "OTP sent successfully", otp: otpCode }); // remove otp in production
 });
 
 // POST /api/auth/verify-otp
 router.post("/verify-otp", async (req, res) => {
   const { email, phone, otp } = req.body;
+  if (!otp) return res.status(400).json({ error: "OTP required" });
 
-  // Mock validation for now
-  const record = await Otp.findOne({ email, otp });
+  const record = await Otp.findOne({ email, otp }); //  Otp is now accessible here
 
-if (!record) {
-  return res.status(400).json({ error: "Invalid or expired OTP" });
-} {
-    return res.status(400).json({ error: "Invalid or expired OTP" });
+  if (!record) {
+    return res.status(400).json({ error: "Invalid or expired OTP" }); //  invalid case
   }
 
-  // Generate JWT token
+  await Otp.deleteOne({ _id: record._id }); // consume OTP after use
+
   const token = jwt.sign(
-    { email, phone },          // payload — what you embed in the token
-    process.env.JWT_SECRET,    // secret from .env
-    { expiresIn: "1h" }        // token expires in 1 hour
+    { email, phone },
+    process.env.JWT_SECRET,
+    { expiresIn: "1h" }
   );
 
-  res.json({ message: "OTP verified", token });
+  res.json({ message: "OTP verified", token }); // verifed case
 });
 
 module.exports = router;
