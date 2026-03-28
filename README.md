@@ -198,8 +198,7 @@ npm run dev
 Included article:
 **“Retrofit AI vs AI-Native Infrastructure in BFSI”**
 
-(Attached in submission PDF)
-[Uploading vitto_writeup (1).pdf…]()
+(Attached in submission mail)
 
 
 ---
