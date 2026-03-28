@@ -39,13 +39,16 @@ function NavBar() {
 
         {/* Desktop nav */}
         <div style={{ display: "flex", gap: 32, alignItems: "center" }} className="desktop-nav">
-          {[
-            { label: "Platform",   path: "/platform" },
-            { label: "Automation", path: "/automation" },
-            { label: "Why Vitto",  path: "#" },
-            { label: "Resources",  path: "#" },
-          ].map((item) => (
-            <Link key={item.label} to={item.path} style={{
+          
+            {[
+              { label: "Platform",    path: "/platform" },
+              { label: "Automation",  path: "/automation" },
+              { label: "Collections", path: "/collections" },
+              { label: "Agentic AI",  path: "/agentic-ai" },
+              { label: "API",         path: "/api-infra" },
+              { label: "About",       path: "/about" },
+            ].map((item) => (
+              <Link key={item.label} to={item.path} style={{
               color: "rgba(255,255,255,0.72)", fontSize: 14,
               fontFamily: "'DM Sans', sans-serif", fontWeight: 500,
               textDecoration: "none", letterSpacing: "0.01em", transition: "color 0.2s",
@@ -78,8 +81,11 @@ function NavBar() {
           {[
             { label: "Platform",   path: "/platform" },
             { label: "Automation", path: "/automation" },
-            { label: "Why Vitto",  path: "#" },
-            { label: "Resources",  path: "#" },
+            //{ label: "Resources",  path: "#" },
+            { label: "Collections", path: "/collections" },
+            { label: "Agentic AI",  path: "/agentic-ai" },
+            { label: "API",         path: "/api-infra" },
+            { label: "About",       path: "/about" },
           ].map((item) => (
             <Link key={item.label} to={item.path} onClick={() => setMenuOpen(false)} style={{
               color: "rgba(255,255,255,0.8)", fontSize: 15,
@@ -154,7 +160,7 @@ function Footer() {
               { label: "Sign Up",    path: "/signup" },
             ]},
             { heading: "Platform", links: [
-              { label: "API Docs",      path: "#" },
+              { label: "API Docs",      path: "/api-infra" },
               { label: "Integrations",  path: "#" },
               { label: "Security",      path: "#" },
               { label: "Changelog",     path: "#" },

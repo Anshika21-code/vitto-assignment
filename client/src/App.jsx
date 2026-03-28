@@ -21,9 +21,9 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/collections" element={<CollectionsPage />} />
           <Route path="/agentic-ai"  element={<AgenticAIPage />} />
-           <Route path="/api-infra"   element={<APIInfraPage />} />
-          <Route path="/about"       element={<AboutPage />} /> 
-          <Route path="/contact"     element={<ContactPage />} />
+          <Route path="/api-infra" element={<APIInfraPage />} />
+          <Route path="/about"  element={<AboutPage />} /> 
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Layout>
     </Router>

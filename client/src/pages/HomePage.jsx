@@ -1629,10 +1629,12 @@ function NavBar() {
           className="desktop-nav"
         >
           {[
-            { label: "Platform", path: "/platform" },
-            { label: "Automation", path: "/automation" },
-            { label: "Why Vitto", path: "#" },
-            { label: "Resources", path: "#" },
+            { label: "Platform",    path: "/platform" },
+              { label: "Automation",  path: "/automation" },
+              { label: "Collections", path: "/collections" },
+              { label: "Agentic AI",  path: "/agentic-ai" },
+               { label: "API",         path: "/api-infra" },
+              { label: "About",       path: "/about" },
           ].map((item) => (
             <Link
               key={item.label}
