@@ -7,8 +7,8 @@ This project demonstrates an **AI-native digital credit infrastructure platform*
 
 ##  Live Demo
 
-*  Frontend: *(Add your Vercel/Netlify link here)*
-*  Backend API: *(Add your Render/Railway link here)*
+*  Frontend: *(https://vitto-assignment.vercel.app)*
+*  Backend API: *(https://vitto-assignment.onrender.com)*
 
 ---
 
@@ -59,32 +59,32 @@ This is **not a marketing website** — it is a **technical product website** de
 
 ##  Website Pages
 
-* Homepage                                                                  * AI-First Platform Page
-<img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/cfcd80f1-73d3-44f9-b696-fef431f79b20" />  <img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/f369801c-5e56-40a9-9337-b8b8ab99699a" />
+* Homepage                                                                  
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/cfcd80f1-73d3-44f9-b696-fef431f79b20" />  
 
 * AI-First Platform Page
- <img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/f369801c-5e56-40a9-9337-b8b8ab99699a" />
+ <img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/f369801c-5e56-40a9-9337-b8b8ab99699a" />
 
 * Full Stack Automation Page
-<img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/ed8d4d68-6a42-49a8-902f-ccede15d3c31" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/ed8d4d68-6a42-49a8-902f-ccede15d3c31" />
 
 * Collections Intelligence Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/50e52b0b-0b20-4ae4-b1a7-1cbbcc29420d" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/50e52b0b-0b20-4ae4-b1a7-1cbbcc29420d" />
 
 * Agentic AI Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/6d094e21-e13d-42e7-aedc-32b5e57dd119" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/6d094e21-e13d-42e7-aedc-32b5e57dd119" />
 
 * API Infrastructure Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/55d54fb2-fb23-473d-8138-afe3e3eabf68" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/55d54fb2-fb23-473d-8138-afe3e3eabf68" />
 
 * About Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/49c19fb0-11c9-437e-ae54-2e9aa8d06e40" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/49c19fb0-11c9-437e-ae54-2e9aa8d06e40" />
 
 * Contact Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/58d06957-5f27-441a-8585-df542b4a5c58" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/58d06957-5f27-441a-8585-df542b4a5c58" />
 
 * Self Sign-Up Page (OTP flow)
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/6071634e-9b72-4477-a5fe-df4bba930fc9" />
+<img width="850" height="490" alt="image" src="https://github.com/user-attachments/assets/6071634e-9b72-4477-a5fe-df4bba930fc9" />
 
 
 
@@ -179,68 +179,8 @@ cd client
 npm install
 npm run dev
 ```
-
 ---
 
-###  Open App
-
-```
-http://localhost:5173
-```
-
----
-
-##  API Testing (Postman / Curl)
-
-### Send OTP
-
-```
-POST /api/auth/send-otp
-Body:
-{
-  "email": "test@example.com"
-}
-```
-
----
-
-### Verify OTP
-
-```
-POST /api/auth/verify-otp
-Body:
-{
-  "email": "test@example.com",
-  "otp": "123456"
-}
-```
-
----
-
-### Create Lead
-
-```
-POST /api/leads
-Body:
-{
-  "email": "test@example.com",
-  "phone": "9999999999",
-  "institution_name": "ABC Finance",
-  "institution_type": "NBFC",
-  "city": "Mumbai",
-  "loan_book_size": "50 Cr"
-}
-```
-
----
-
-### Get Lead
-
-```
-GET /api/leads/:id
-```
-
----
 
 ##  Key Features
 
@@ -259,6 +199,8 @@ Included article:
 **“Retrofit AI vs AI-Native Infrastructure in BFSI”**
 
 (Attached in submission PDF)
+[Uploading vitto_writeup (1).pdf…]()
+
 
 ---
 
@@ -278,7 +220,7 @@ VIT Bhopal
 
 ---
 
-## 🎯 Final Thought
+##  Final Thought
 
 > Traditional LOS is a transaction system.
 > **Vitto is a decisioning system.**
