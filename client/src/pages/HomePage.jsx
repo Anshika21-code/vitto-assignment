@@ -1548,7 +1548,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
+import gsap from "gsap";
+ 
 // ─── Palette & tokens ───────────────────────────────────────────────────────
 // Navy: #1A1A2E  |  Red: #D32F2F  |  Accent light: #E8E8F0  |  Muted: #8888A8
 
@@ -1771,6 +1772,25 @@ function Hero() {
     };
   }, []);
 
+  useEffect(() => {
+  gsap.fromTo(".hero-badge", 
+    { opacity: 0, y: 20 }, 
+    { opacity: 1, y: 0, duration: 0.6 }
+  );
+  gsap.fromTo(".hero-h1",
+    { opacity: 0, y: 40 },
+    { opacity: 1, y: 0, duration: 0.8, delay: 0.2 }
+  );
+  gsap.fromTo(".hero-sub",
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.7, delay: 0.4 }
+  );
+  gsap.fromTo(".hero-ctas",
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 0.6, delay: 0.6 }
+  );
+}, []);
+
   return (
     <section
       ref={sectionRef}
@@ -1842,6 +1862,7 @@ function Hero() {
       >
         {/* Badge */}
         <div
+          className="hero-badge" 
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -1877,6 +1898,7 @@ function Hero() {
 
         {/* H1 */}
         <h1
+        className="hero-h1"
           style={{
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: "clamp(30px, 5vw, 62px)",
@@ -1896,6 +1918,7 @@ function Hero() {
 
         {/* Sub-copy */}
         <p
+        className="hero-sub"
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "clamp(15px, 2vw, 18px)",
@@ -1912,6 +1935,7 @@ function Hero() {
 
         {/* CTAs */}
         <div
+        className="hero-ctas"  
           style={{
             display: "flex",
             gap: 16,
@@ -2659,7 +2683,7 @@ function ImpactSection() {
       sub: "Bureau, banking, payment, KYC providers",
     },
   ];
-
+ 
   return (
     <section style={{ background: "#1A1A2E", padding: "100px 2rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -2692,6 +2716,7 @@ function ImpactSection() {
         </div>
 
         <div
+        
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
