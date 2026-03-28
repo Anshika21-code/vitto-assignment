@@ -242,7 +242,7 @@ function Step1({ onNext }) {
               fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.65)", marginBottom: 8,
             }}>Enter OTP</label>
             <div style={{ display: "flex", gap: 8 }}>
-              <input value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/, "").slice(0, 6))}
+              <input value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
                 placeholder="6-digit code" maxLength={6}
                 style={{
                   flex: 1, background: "rgba(255,255,255,0.05)",

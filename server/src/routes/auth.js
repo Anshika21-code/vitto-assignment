@@ -35,11 +35,11 @@ router.post("/send-otp", async (req, res) => {
 
     // In production: send via SMS/email provider
     // For now: log to console + return in response (dev only)
-    console.log(`📱 OTP for ${identifier}: ${otp}`);
+    console.log(` OTP for ${identifier}: ${otp}`);
 
     res.json({
       message: "OTP sent successfully",
-      otp,         // ⚠️  Remove this in production
+      otp,         //   Remove this in production
     });
 
   } catch (err) {
@@ -65,7 +65,10 @@ router.post("/verify-otp", async (req, res) => {
       return res.status(400).json({ error: "OTP expired or not found. Please request a new one." });
     }
 
-    if (session.otp !== otp) {
+    const cleanOtp = otp.toString().trim(); 
+
+
+    if (session.otp !== cleanOtp) {
       return res.status(400).json({ error: "Incorrect OTP. Please try again." });
     }
 
