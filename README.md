@@ -52,8 +52,8 @@ This is **not a marketing website** — it is a **technical product website** de
 ##  Folder Structure
 
 
-<img width="395" height="809" alt="image" src="https://github.com/user-attachments/assets/50de4f2a-3b67-420d-a791-9d68c0caf8e7" />
-<img width="404" height="594" alt="image" src="https://github.com/user-attachments/assets/f4e26fe3-5e53-4612-8174-225bc2edc760" />
+<img width="300" height="700" alt="image" src="https://github.com/user-attachments/assets/50de4f2a-3b67-420d-a791-9d68c0caf8e7" />
+<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/f4e26fe3-5e53-4612-8174-225bc2edc760" />
 
 ---
 
@@ -64,7 +64,7 @@ This is **not a marketing website** — it is a **technical product website** de
 
 * AI-First Platform Page
 * Full Stack Automation Page
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/ed8d4d68-6a42-49a8-902f-ccede15d3c31" />
+<img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/ed8d4d68-6a42-49a8-902f-ccede15d3c31" />
 
 * Collections Intelligence Page
 <img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/50e52b0b-0b20-4ae4-b1a7-1cbbcc29420d" />
