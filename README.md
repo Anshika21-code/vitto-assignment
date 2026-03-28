@@ -59,10 +59,12 @@ This is **not a marketing website** — it is a **technical product website** de
 
 ##  Website Pages
 
-* Homepage
-<img width="960" height="515" alt="image" src="https://github.com/user-attachments/assets/cfcd80f1-73d3-44f9-b696-fef431f79b20" />
+* Homepage                                                                  * AI-First Platform Page
+<img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/cfcd80f1-73d3-44f9-b696-fef431f79b20" />  <img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/f369801c-5e56-40a9-9337-b8b8ab99699a" />
 
 * AI-First Platform Page
+ <img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/f369801c-5e56-40a9-9337-b8b8ab99699a" />
+
 * Full Stack Automation Page
 <img width="480" height="257.5" alt="image" src="https://github.com/user-attachments/assets/ed8d4d68-6a42-49a8-902f-ccede15d3c31" />
 
