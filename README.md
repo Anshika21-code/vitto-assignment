@@ -51,7 +51,7 @@ This is **not a marketing website** — it is a **technical product website** de
 
 ##  Folder Structure
 
-```
+
 <img width="395" height="809" alt="image" src="https://github.com/user-attachments/assets/50de4f2a-3b67-420d-a791-9d68c0caf8e7" />
 <img width="404" height="594" alt="image" src="https://github.com/user-attachments/assets/f4e26fe3-5e53-4612-8174-225bc2edc760" />
 
