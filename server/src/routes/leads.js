@@ -106,8 +106,8 @@ router.get("/:id", verifyToken, async (req, res) => {
 
     const result = await pool.query(
       `SELECT id, email, phone, institution_name, institution_type,
-              city, loan_book_size, status, created_at
-       FROM leads WHERE id = $1`,
+      city, loan_book_size, status, created_at
+      FROM leads WHERE id = $1`,
       [id]
     );
 

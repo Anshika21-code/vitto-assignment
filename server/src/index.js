@@ -1,8 +1,7 @@
 // ── src/index.js ─────────────────────────────────────────────────────────────
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
-
 const { connectMongo } = require("./db/mongo");
 const { connectPostgres } = require("./db/postgres");
 const authRoutes = require("./routes/auth");
