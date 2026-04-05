@@ -1,6 +1,6 @@
-#  Vitto — AI-First BFSI Infrastructure Website
+#  FinTrack — AI-First BFSI Infrastructure Website
 
-A full-stack web application built as part of the **Vitto Full Stack Intern Assignment**.
+A full-stack web application built as part of the **FinTrack Full Stack Intern Assignment**.
 This project demonstrates an **AI-native digital credit infrastructure platform** for Banks, NBFCs, and MFIs — covering frontend product thinking, backend APIs, and database integration.
 
 ---
