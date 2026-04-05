@@ -58,7 +58,7 @@ function NavBar() {
               fontSize: 18,
             }}
           >
-            V
+            ₹
           </div>
           <span
             style={{
