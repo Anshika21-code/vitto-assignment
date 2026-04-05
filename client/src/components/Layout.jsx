@@ -30,7 +30,7 @@ function NavBar() {
             display: "flex", alignItems: "center", justifyContent: "center",
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontWeight: 700, color: "#fff", fontSize: 18,
-          }}>V</div>
+          }}>₹</div>
           <span style={{
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: 22, color: "#fff", letterSpacing: "-0.02em",
@@ -121,7 +121,7 @@ function Footer() {
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontFamily: "'DM Serif Display', Georgia, serif",
                 fontWeight: 700, color: "#fff", fontSize: 16,
-              }}>V</div>
+              }}>₹</div>
               <span style={{
                 fontFamily: "'DM Serif Display', Georgia, serif",
                 fontSize: 20, color: "#fff",
