@@ -1,7 +1,7 @@
-# Vitto Website Sitemap
+# FinTrack Website Sitemap
 
 ## 1. Homepage
-- Why: Introduce Vitto as AI-first lending infrastructure
+- Why: Introduce FinTrack as AI-first lending infrastructure
 - Audience: CTOs, Credit Heads
 - Goal: Book demo / Explore platform
 
@@ -30,7 +30,7 @@
 - Audience: Developers / CTO
 - Goal: Encourage adoption
 
-## 7. About / Why Vitto
+## 7. About / Why FinTrack
 - Why: Build credibility and vision
 - Audience: All stakeholders
 - Goal: Trust building

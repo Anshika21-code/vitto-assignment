@@ -49,7 +49,7 @@ export default function ContactPage() {
             color: "#fff", lineHeight: 1.15, letterSpacing: "-0.02em",
             margin: "0 0 20px",
           }}>
-            See Vitto running on
+            See FinTrack running on
             <br />your lending workflows
           </h1>
           <p style={{
@@ -127,7 +127,7 @@ export default function ContactPage() {
             {/* Contact details */}
             <div style={{ marginTop: 8 }}>
               {[
-                { label: "Email", value: "demo@vitto.in" },
+                { label: "Email", value: "demo@fintrack.in" },
                 { label: "Response time", value: "Within 24 hours" },
                 { label: "Demo duration", value: "45 minutes" },
               ].map((item) => (

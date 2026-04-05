@@ -23,7 +23,7 @@ const modules = [
       },
       {
         heading: "Bureau-Agnostic Scoring",
-        body: "Built for India's thin-file population where CIBIL scores are absent or insufficient. The model generates a Vitto Credit Score (VCS) even when bureau data is missing, using ensemble methods across gradient boosting, logistic regression, and neural collaborative filtering.",
+        body: "Built for India's thin-file population where CIBIL scores are absent or insufficient. The model generates a FinTrack Credit Score (VCS) even when bureau data is missing, using ensemble methods across gradient boosting, logistic regression, and neural collaborative filtering.",
       },
       {
         heading: "Explainability Layer",
@@ -53,7 +53,7 @@ const modules = [
     technical: [
       {
         heading: "Portfolio-Specific Training",
-        body: "Unlike generic scoring models, Vitto's ML layer trains on each lender's own historical disbursement and repayment data. The model learns your portfolio's risk signature — not industry averages. Retraining pipelines run on a configurable cadence (weekly by default) using new repayment outcomes as ground truth.",
+        body: "Unlike generic scoring models, FinTrack's ML layer trains on each lender's own historical disbursement and repayment data. The model learns your portfolio's risk signature — not industry averages. Retraining pipelines run on a configurable cadence (weekly by default) using new repayment outcomes as ground truth.",
       },
       {
         heading: "Champion-Challenger Architecture",
@@ -170,11 +170,11 @@ const modules = [
     technical: [
       {
         heading: "Why Not ChatGPT or Public LLMs",
-        body: "General-purpose LLMs are trained on internet-scale data optimized for fluency — not accuracy within a regulated credit policy. They hallucinate RBI circular references, confuse product-specific eligibility criteria, and cannot access your live ledger or application state. In a BFSI context, a confident wrong answer is worse than no answer. Vitto's agents are grounded in your institution's actual policy documents, live data, and operational constraints.",
+        body: "General-purpose LLMs are trained on internet-scale data optimized for fluency — not accuracy within a regulated credit policy. They hallucinate RBI circular references, confuse product-specific eligibility criteria, and cannot access your live ledger or application state. In a BFSI context, a confident wrong answer is worse than no answer. FinTrack's agents are grounded in your institution's actual policy documents, live data, and operational constraints.",
       },
       {
         heading: "SLM Architecture: RAG + Domain Training",
-        body: "Vitto runs a Small Language Model fine-tuned on a curated corpus of RBI guidelines, NBFC Master Directions, credit policy documents, product manuals, and historical Q&A logs from credit operations teams. A Retrieval-Augmented Generation (RAG) pipeline retrieves the relevant policy chunk before every response — so the model generates answers grounded in real documents, not parametric memory. Context window is populated with live application data, account state, and user role before each agent invocation.",
+        body: "FinTrack runs a Small Language Model fine-tuned on a curated corpus of RBI guidelines, NBFC Master Directions, credit policy documents, product manuals, and historical Q&A logs from credit operations teams. A Retrieval-Augmented Generation (RAG) pipeline retrieves the relevant policy chunk before every response — so the model generates answers grounded in real documents, not parametric memory. Context window is populated with live application data, account state, and user role before each agent invocation.",
       },
       {
         heading: "Explainability and Compliance",
@@ -572,7 +572,7 @@ export default function AIPlatformPage() {
                 fontWeight: 600, textTransform: "uppercase", marginBottom: 16,
                 fontFamily: "'DM Mono', monospace",
               }}>
-                Vitto Domain SLM
+                FinTrack Domain SLM
               </div>
               {[
                 "Fine-tuned on RBI guidelines, NBFC Master Directions, credit policy docs",

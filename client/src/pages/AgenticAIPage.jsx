@@ -27,32 +27,32 @@ export default function AgenticAIPage() {
     {
       aspect: "Training data",
       generic: "Internet-scale general knowledge",
-      vitto: "Institution's credit policy, product rules, RBI guidelines",
+      fintrack: "Institution's credit policy, product rules, RBI guidelines",
     },
     {
       aspect: "Hallucination risk",
       generic: "High — no grounding in policy",
-      vitto: "Low — responses grounded in RAG pipeline over verified docs",
+      fintrack: "Low — responses grounded in RAG pipeline over verified docs",
     },
     {
       aspect: "Explainability",
       generic: "Black box — cannot cite source",
-      vitto: "Every response cites the policy clause or document it drew from",
+      fintrack: "Every response cites the policy clause or document it drew from",
     },
     {
       aspect: "Regulatory compliance",
       generic: "Not designed for regulated environments",
-      vitto: "Built around RBI Fair Practices Code and lending regulations",
+      fintrack: "Built around RBI Fair Practices Code and lending regulations",
     },
     {
       aspect: "Data privacy",
       generic: "Queries may leave your environment",
-      vitto: "Runs on your infrastructure — borrower data never leaves",
+      fintrack: "Runs on your infrastructure — borrower data never leaves",
     },
     {
       aspect: "Audit trail",
       generic: "No structured logging",
-      vitto: "Full interaction log with policy references for regulator review",
+      fintrack: "Full interaction log with policy references for regulator review",
     },
   ];
 
@@ -81,7 +81,7 @@ export default function AgenticAIPage() {
             color: "rgba(255,255,255,0.55)", lineHeight: 1.75,
             maxWidth: 600, margin: "0 auto",
           }}>
-            Vitto's agentic layer is not ChatGPT with a lending wrapper. It is a
+            FinTrack's agentic layer is not ChatGPT with a lending wrapper. It is a
             Small Language Model trained on your institution's credit policy,
             product rules, and regulatory framework — purpose-built for regulated
             lending environments.
@@ -131,7 +131,7 @@ export default function AgenticAIPage() {
               padding: "16px 24px",
               borderBottom: "1px solid rgba(255,255,255,0.07)",
             }}>
-              {["Aspect", "Generic LLM (ChatGPT etc.)", "Vitto SLM"].map((h, i) => (
+              {["Aspect", "Generic LLM (ChatGPT etc.)", "FinTrack SLM"].map((h, i) => (
                 <div key={h} style={{
                   fontFamily: "'DM Sans', sans-serif", fontSize: 12,
                   fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
@@ -161,7 +161,7 @@ export default function AgenticAIPage() {
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif", fontSize: 14,
                   color: "rgba(255,255,255,0.75)", lineHeight: 1.5,
-                }}>{row.vitto}</div>
+                }}>{row.fintrack}</div>
               </div>
             ))}
           </div>

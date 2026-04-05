@@ -47,7 +47,7 @@ export default function CollectionsPage() {
             color: "rgba(255,255,255,0.55)", lineHeight: 1.75,
             maxWidth: 580, margin: "0 auto",
           }}>
-            Vitto's collections module uses propensity-to-pay scoring to tell your team
+            FinTrack's collections module uses propensity-to-pay scoring to tell your team
             who to contact, when to contact them, and through which channel — before they
             miss a payment.
           </p>

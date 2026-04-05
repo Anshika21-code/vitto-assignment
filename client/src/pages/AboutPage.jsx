@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function AboutPage() {
   const values = [
     { icon: "◈", title: "Decisioning depth over feature breadth", desc: "We build fewer things and build them right. Every module is designed around the data it needs to make an accurate decision — not around a checkbox in an RFP." },
-    { icon: "◎", title: "Explainability is not optional", desc: "In a regulated lending environment, a black-box model is a liability. Every decision Vitto makes can be explained to a borrower, a regulator, or a board." },
-    { icon: "⬡", title: "Infrastructure, not software", desc: "Vitto is not a SaaS tool your team logs into. It is the decisioning and automation layer your entire lending operation runs on — from lead to closure." },
+    { icon: "◎", title: "Explainability is not optional", desc: "In a regulated lending environment, a black-box model is a liability. Every decision FinTrack makes can be explained to a borrower, a regulator, or a board." },
+    { icon: "⬡", title: "Infrastructure, not software", desc: "FinTrack is not a SaaS tool your team logs into. It is the decisioning and automation layer your entire lending operation runs on — from lead to closure." },
     { icon: "△", title: "Built for India's lending complexity", desc: "Multiple languages, diverse borrower profiles, state-level regulatory variation, and a fragmented data ecosystem. We build for this reality, not a simplified version of it." },
   ];
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
             fontFamily: "'DM Sans', sans-serif", fontSize: 12,
             letterSpacing: "0.12em", color: "#D32F2F",
             fontWeight: 600, textTransform: "uppercase", marginBottom: 16,
-          }}>Why Vitto</p>
+          }}>Why FinTrack</p>
           <h1 style={{
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 400,
@@ -49,7 +49,7 @@ export default function AboutPage() {
             color: "rgba(255,255,255,0.55)", lineHeight: 1.8,
             maxWidth: 620, margin: 0,
           }}>
-            Vitto is what happens when a credit risk professional and an ML engineer
+            FinTrack is what happens when a credit risk professional and an ML engineer
             sit down together and design from first principles — not from a legacy
             codebase, and not from a generic AI toolkit.
           </p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             }}>
               "A traditional LOS is a transaction system.
               <br />
-              <span style={{ color: "#D32F2F" }}>Vitto is a decisioning system."</span>
+              <span style={{ color: "#D32F2F" }}>FinTrack is a decisioning system."</span>
             </p>
             <p style={{
               fontFamily: "'DM Sans', sans-serif", fontSize: 14,

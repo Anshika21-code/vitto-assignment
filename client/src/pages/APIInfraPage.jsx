@@ -44,7 +44,7 @@ export default function APIInfraPage() {
             color: "rgba(255,255,255,0.55)", lineHeight: 1.75,
             maxWidth: 580, margin: "0 auto",
           }}>
-            Vitto exposes a clean REST API surface across every module — credit assessment,
+            FinTrack exposes a clean REST API surface across every module — credit assessment,
             KYC, collections, fraud, and portfolio analytics. 60+ pre-built integrations
             across bureau, banking, identity, and communication providers.
           </p>
@@ -83,7 +83,7 @@ export default function APIInfraPage() {
               <span style={{
                 fontFamily: "monospace", fontSize: 12,
                 color: "rgba(255,255,255,0.3)", marginLeft: 8,
-              }}>api.vitto.in/v1</span>
+              }}>api.fintrack.in/v1</span>
             </div>
 
             {endpoints.map((ep, i) => (

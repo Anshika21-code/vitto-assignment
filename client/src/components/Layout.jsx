@@ -34,7 +34,7 @@ function NavBar() {
           <span style={{
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: 22, color: "#fff", letterSpacing: "-0.02em",
-          }}>Vitto</span>
+          }}>FinTrack</span>
         </Link>
 
         {/* Desktop nav */}
@@ -125,7 +125,7 @@ function Footer() {
               <span style={{
                 fontFamily: "'DM Serif Display', Georgia, serif",
                 fontSize: 20, color: "#fff",
-              }}>Vitto</span>
+              }}>FinTrack</span>
             </Link>
             <p style={{
               fontFamily: "'DM Sans', sans-serif", fontSize: 13,
@@ -194,7 +194,7 @@ function Footer() {
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.25)", margin: 0 }}>
-            © 2025 Vitto Technologies Pvt. Ltd. All rights reserved.
+            © 2026 FinTrack Technologies Pvt. Ltd. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: 20 }}>
             {["LinkedIn", "Twitter", "GitHub"].map((social) => (

@@ -445,7 +445,7 @@ export default function SignUpPage() {
             fontFamily: "'DM Serif Display', Georgia, serif",
             fontSize: 20, fontWeight: 400, color: "rgba(255,255,255,0.5)",
             margin: 0, letterSpacing: "-0.01em",
-          }}>Join the Vitto platform</h1>
+          }}>Join the FinTrack platform</h1>
         </div>
 
         <StepIndicator current={step} />
@@ -467,7 +467,7 @@ export default function SignUpPage() {
             color: "rgba(255,255,255,0.25)", textAlign: "center",
             marginTop: 20, lineHeight: 1.6,
           }}>
-            By continuing, you agree to Vitto's{" "}
+            By continuing, you agree to FinTrack's{" "}
             <a href="#" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "underline" }}>Terms of Service</a>
             {" "}and{" "}
             <a href="#" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "underline" }}>Privacy Policy</a>.

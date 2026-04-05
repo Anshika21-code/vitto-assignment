@@ -478,7 +478,7 @@ export default function AutomationPage() {
               fontWeight: 500, lineHeight: 1.6, maxWidth: 700,
             }}>
               A traditional LOS is a transaction system.{" "}
-              <span style={{ color: "#F5F5F5", fontWeight: 700 }}>Vitto is a decisioning system.</span>
+              <span style={{ color: "#F5F5F5", fontWeight: 700 }}>FinTrack is a decisioning system.</span>
             </p>
           </div>
         </div>
